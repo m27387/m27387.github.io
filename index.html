@@ -1,7 +1,36 @@
 <!DOCTYPE html>
 <html>
+<script type="text/javascript">
+	function populateQuestions() {
+  var questionSets = [
+    ["Set 1 Question 1", "Set 1 Question 2", "Set 1 Question 3", "Set 1 Question 4", "Set 1 Question 5"],
+    ["Set 2 Question 1", "Set 2 Question 2", "Set 2 Question 3", "Set 2 Question 4", "Set 2 Question 5"],
+    ["Set 3 Question 1", "Set 3 Question 2", "Set 3 Question 3", "Set 3 Question 4", "Set 3 Question 5"],
+    ["Set 4 Question 1", "Set 4 Question 2", "Set 4 Question 4", "Set 4 Question 4", "Set 4 Question 5"],
+    ["Set 5 Question 1", "Set 5 Question 2", "Set 5 Question 5", "Set 5 Question 4", "Set 5 Question 5"]
+  ];
+
+  for (var setIndex = 0; setIndex < questionSets.length; ++setIndex) {
+    var questionSet = questionSets[setIndex];
+    var questionIndex = Math.floor(Math.random() * questionSet.length);
+    var question = questionSet[questionIndex];
+    var selector = '#questions li:nth-child(' + (setIndex + 1).toString() + ')';
+    //var setId = 'set_' + (setIndex + 1).toString();
+    document.querySelector(selector).innerHTML = question;
+    //document.getElementById(setId).innerHTML = question;
+  }
+}
+</script>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
+<p><ul id="questions">
+  <li id="set_1">First question</li>
+  <li id="set_2">Second question</li>
+  <li id="set_3">Third question</li>
+  <li id="set_4">Fourth question</li>
+  <li id="set_5">Fifth question</li>
+</ul>
+<button type=button onclick="populateQuestions()">Populate the questions!</button></p>
 </body>
 </html>
