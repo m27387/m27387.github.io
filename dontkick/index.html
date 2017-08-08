@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js A simple Demo</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="./jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="./examples/examples.css" />
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="./vendors/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="./jquery.fullPage.js"></script>
+	<script type="text/javascript" src="./fullpage.scrollHorizontally.limited.min.js"></script>
+	<script type="text/javascript" src="./jquery.fullpage.extensions.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#FFC6BC', '#FEDEA2', '#FFF9B8', '#D3DBB2', 'whitesmoke', '#A7D3D2'],
+    scrollHorizontally: true,
+    scrollHorizontallyKey: 'bTI3Mzg3LmdpdGh1Yi5pb19XdFdjMk55YjJ4c1NHOXlhWHB2Ym5SaGJHeDVXTVc='
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="fullpage">
+	<div class="section" id="section0"><img src="./img/voila-01.png"></div>
+	<div class="section" id="section1"><h2>何時啟動？</h2><p>只要<strong class="red">單科</strong>有人<strong class="red">低於70分</strong>便啟動T評制度<p>
+	</div>
+	<div class="section" id="section2"><img src="./img/voila-02.png"></div>
+	<div class="section active" id="section3">
+	    <div class="slide active"><h2>分數<strong class="red">低</strong>，就會被Ｔ嗎？</h2></div>
+	    <div class="slide"><h1><strong class="red">不一定</strong></h1></div>
+	    <div class="slide"><h2>分數<strong class="red">高</strong>，就不會被Ｔ嗎？</h2></div>
+	    <div class="slide"><h1><strong class="red">不一定</strong></h1></div>
+	    <div class="slide"><p>答案藏在<strong class="red">標準差SD</strong>裡面</p><p>也就是<strong class="red">會不會被Ｔ</strong>，是<strong class="red">全期一起決定的</strong></p></div>
+
+	</div>
+</div>
+
+</body>
+</html>
