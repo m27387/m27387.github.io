@@ -1,4 +1,4 @@
-module github.com/hugo-toha/hugo-toha.github.io
+module github.com/m27387/m27387.github.io
 
 go 1.19
 
